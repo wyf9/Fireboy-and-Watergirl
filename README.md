@@ -54,6 +54,17 @@ tools/                  # Build & utility scripts
 img/                    # Main page assets
 ```
 
+## Multiplayer / 多人联机
+
+异地双人合作:一人控制火人(方向键),一人控制冰人(WAD),各自设备一起通关。
+进入任意关卡后点右上角 **👥 联机**,约定房间号即可连接。默认走 PeerJS 公共 broker,**零后端**。
+
+- 玩法与架构:[docs/MULTIPLAYER.md](docs/MULTIPLAYER.md)
+- 自建信令 / 中转 / TURN 服务器:[docs/SELF-HOSTING.md](docs/SELF-HOSTING.md)
+
+联机采用**主机权威 + 状态同步**(跨浏览器稳定),并内置**确定性锁步**模式用于 A/B 对比。
+配置文件:`games/lib/net/net-config.js`;可选服务器:`server/signal-server.js`。
+
 ## Shared Assets & Service Worker
 
 Identical assets across games (audio, sprites, fonts, etc.) are stored once in `games/shared-assets/` to reduce repository size. A Service Worker (`games/sw.js`) transparently redirects asset requests to the shared location.

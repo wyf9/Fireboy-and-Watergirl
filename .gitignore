@@ -4,3 +4,6 @@ har/
 # Python cache
 __pycache__/
 *.pyc
+
+# Node dependencies (signaling server)
+node_modules/

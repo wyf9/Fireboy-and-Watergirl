@@ -1,0 +1,18 @@
+{
+  "name": "fbwg-signal-server",
+  "version": "1.0.0",
+  "description": "森林冰火人多人联机 信令/中转服务器 (WebRTC signaling + WebSocket relay)",
+  "main": "signal-server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node signal-server.js",
+    "dev": "node signal-server.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "license": "MIT"
+}
